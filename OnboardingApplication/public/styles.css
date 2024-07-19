@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF8000; /* Just Eat primary color */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+button {
+    background-color: #FF8000; /* Just Eat primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #007bbc; /* Darker shade of Just Eat primary color */
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: #FF8000; /* Just Eat primary color */
+    border-radius: 8px;
+}
+
+.form-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.company-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.company-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.company-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.faq {
+    text-align: left;
+    margin-bottom: 20px;
+}

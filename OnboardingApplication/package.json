@@ -1,0 +1,18 @@
+{
+  "name": "onboarding-app",
+  "version": "1.0.0",
+  "description": "Onboarding application for Just Eat",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^6.2.3"
+  }
+}

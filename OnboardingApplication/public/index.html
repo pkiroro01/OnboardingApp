@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onboarding Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Wow.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/just-eat-orange.png" alt="Just Eat Logo">
+        </div>
+        <ul>
+            <li><a href="#onboarding-section">Onboarding</a></li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#help-section">Need Help</a></li>
+            <li><a href="#faq-section">FAQ</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="onboarding-section" class="container">
+    <h1>Welcome to the Onboarding Application</h1>
+    <p>This application will guide you through the onboarding process.</p>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <form id="onboardingForm" novalidate>
+        <div class="form-group animate__animated" id="step1">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <div class="button-container">
+                <button type="button" class="btn-next" onclick="nextStep(1)">Next</button>
+            </div>
+        </div>
+        <div class="form-group animate__animated" id="step2" style="display:none;">
+            <label for="startDate">Starting Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <div class="button-container">
+                <button type="button" class="btn-back" onclick="prevStep(2)">Back</button>
+                <button type="button" class="btn-next" onclick="nextStep(2)">Next</button>
+            </div>
+        </div>
+        <div class="form-group animate__animated" id="step3" style="display:none;">
+            <label for="jobRole">Job Role:</label>
+            <select id="jobRole" name="jobRole" required>
+                <option value="">Select Role</option>
+                <option value="engineering">Engineering</option>
+                <option value="sales">Sales</option>
+                <option value="HR">HR</option>
+            </select>
+            <div class="button-container">
+                <button type="button" class="btn-back" onclick="prevStep(3)">Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div id="result" style="display: none;">
+        <h2>Onboarding Details</h2>
+        <p id="resultName"></p>
+        <p id="resultStartDate"></p>
+        <p id="resultJobRole"></p>
+        <div class="button-container">
+            <button class="btn" onclick="editDetails()">Edit Details</button>
+            <button class="btn" onclick="resetForm()">Onboard New User</button>
+        </div>
+    </div>
+</section>
+
+<section id="about-section" class="container">
+    <div class="company-info">
+        <img src="images/just-eat-logo.jpg" alt="Just Eat Logo" class="company-logo">
+        <h2>About Just Eat</h2>
+        <p>Just Eat is a leading online food delivery marketplace, connecting consumers and restaurants through its platform in 24 countries.</p>
+        <p>Founded in Denmark in 2001, Just Eat has grown to become a global leader in online food delivery, offering a convenient and reliable service to millions of customers worldwide.</p>
+        <p>Our mission is to empower customers to choose from a wide variety of restaurants, providing them with an easy and fast food delivery experience.</p>
+        <img src="images/just-eat-delivery.jpg" alt="Just Eat Delivery" class="company-image">
+    </div>
+</section>
+
+<section id="help-section" class="container">
+    <h2>Need Help?</h2>
+    <p>If you need assistance with completing the onboarding form, follow these steps:</p>
+    <ol>
+        <li>Enter your full name in the first step.</li>
+        <li>Select your starting date in the second step.</li>
+        <li>Choose your job role in the final step and submit the form.</li>
+    </ol>
+    <p>If you encounter any issues, please contact our support team.</p>
+</section>
+
+<section id="faq-section" class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        <h3>How do I complete the onboarding form?</h3>
+        <p>Follow the steps in the form: enter your full name, select your starting date, and choose your job role. Then, submit the form.</p>
+    </div>
+    <div class="faq">
+        <h3>Can I edit my details after submission?</h3>
+        <p>Yes, after submission, you have the option to edit your details or onboard a new user.</p>
+    </div>
+    <div class="faq">
+        <h3>Who can I contact for further assistance?</h3>
+        <p>If you need further assistance, please email us at <a href="mailto:dummyemail@example.com">dummyemail@example.com</a>.</p>
+    </div>
+</section>
+
+<section id="contact-section" class="container">
+    <h2>Contact Us</h2>
+    <p>For any inquiries, please email us at <a href="mailto:dummyemail@example.com">dummyemail@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="app.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

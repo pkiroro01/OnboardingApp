@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onboarding Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Wow.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Onboarding Form</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <form id="onboardingForm">
+        <div class="form-group animate__animated" id="step1">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <button type="button" class="btn-next" onclick="nextStep(1)">Next</button>
+        </div>
+        <div class="form-group animate__animated" id="step2" style="display:none;">
+            <label for="startDate">Starting Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <button type="button" class="btn-back" onclick="prevStep(2)">Back</button>
+            <button type="button" class="btn-next" onclick="nextStep(2)">Next</button>
+        </div>
+        <div class="form-group animate__animated" id="step3" style="display:none;">
+            <label for="jobRole">Job Role:</label>
+            <select id="jobRole" name="jobRole" required>
+                <option value="">Select Role</option>
+                <option value="engineering">Engineering</option>
+                <option value="sales">Sales</option>
+                <option value="HR">HR</option>
+            </select>
+            <button type="button" class="btn-back" onclick="prevStep(3)">Back</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <div id="result" style="display: none;">
+        <h2>Onboarding Details</h2>
+        <p id="resultName"></p>
+        <p id="resultStartDate"></p>
+        <p id="resultJobRole"></p>
+        <p id="resultTrainingPath"></p>
+        <div>
+            <button class="btn" onclick="editDetails()">Edit Details</button>
+            <button class="btn" onclick="resetForm()">Onboard New User</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="app.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>
