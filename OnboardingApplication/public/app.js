@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('resultJobRole').innerText = `Job Role: ${jobRole}`;
         document.getElementById('resultPath').innerText = `Learning Path: ${learningPath.pathName}`;
 
-        const coursesList = learningPath.courses.map(course => `<li>${course}</li>`).join('');
+        const coursesList = learningPath.courses.map(course => `<li><a href="${course.url}" target="_blank">${course.name}</a></li>`).join('');
         document.getElementById('resultCourses').innerHTML = `<ol class="centered-list">${coursesList}</ol>`;
 
         // Ensure progress bar is set to 100% upon submission
@@ -178,28 +178,28 @@ const learningPaths = {
     engineering: {
         pathName: "Engineering Onboarding Path",
         courses: [
-            "Introduction to Engineering",
-            "Advanced Engineering Principles",
-            "Engineering Tools and Technologies",
-            "Code Standards and Practices"
+            { name: "Introduction to Engineering", url: "https://www.linkedin.com/learning/introduction-to-engineering" },
+            { name: "Advanced Engineering Principles", url: "https://www.pluralsight.com/courses/advanced-engineering-principles" },
+            { name: "Engineering Tools and Technologies", url: "https://www.udacity.com/course/engineering-tools-and-technologies" },
+            { name: "Code Standards and Practices", url: "https://www.codecademy.com/learn/code-standards-practices" }
         ]
     },
     sales: {
         pathName: "Sales Onboarding Path",
         courses: [
-            "Sales Techniques and Strategies",
-            "Customer Relationship Management",
-            "Sales Tools and Platforms",
-            "Sales Reporting and Analytics"
+            { name: "Sales Techniques and Strategies", url: "https://www.linkedin.com/learning/sales-techniques-strategies" },
+            { name: "Customer Relationship Management", url: "https://www.coursera.org/learn/customer-relationship-management" },
+            { name: "Sales Tools and Platforms", url: "https://www.udemy.com/course/sales-tools-and-platforms" },
+            { name: "Sales Reporting and Analytics", url: "https://www.edx.org/course/sales-reporting-and-analytics" }
         ]
     },
     HR: {
         pathName: "HR Onboarding Path",
         courses: [
-            "Human Resources Fundamentals",
-            "Employee Relations",
-            "HR Compliance and Policies",
-            "HR Tools and Systems"
+            { name: "Human Resources Fundamentals", url: "https://www.linkedin.com/learning/human-resources-fundamentals" },
+            { name: "Employee Relations", url: "https://www.pluralsight.com/courses/employee-relations" },
+            { name: "HR Compliance and Policies", url: "https://www.udemy.com/course/hr-compliance-policies" },
+            { name: "HR Tools and Systems", url: "https://www.coursera.org/learn/hr-tools-systems" }
         ]
     }
 };
