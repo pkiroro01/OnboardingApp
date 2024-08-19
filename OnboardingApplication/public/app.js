@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Onboarding Form Logic
     let currentStep = 1;
 
     function nextStep(step) {
@@ -45,9 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const startDate = document.getElementById('startDate').value;
         const jobRole = document.getElementById('jobRole').value;
 
+        // Get the corresponding learning path
+        const learningPath = learningPaths[jobRole] || { pathName: "Unknown Role", courses: [] };
+
         document.getElementById('resultName').innerText = `Full Name: ${name}`;
         document.getElementById('resultStartDate').innerText = `Starting Date: ${startDate}`;
         document.getElementById('resultJobRole').innerText = `Job Role: ${jobRole}`;
+        document.getElementById('resultPath').innerText = `Learning Path: ${learningPath.pathName}`;
+
+        const coursesList = learningPath.courses.map(course => `<li>${course}</li>`).join('');
+        document.getElementById('resultCourses').innerHTML = `<ul>${coursesList}</ul>`;
 
         toggleFormAndResult(false);
     }
@@ -97,6 +103,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.btn-edit').addEventListener('click', editDetails);
     document.querySelector('.btn-reset').addEventListener('click', resetForm);
 
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    function toggleBackToTopButton() {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+            backToTopButton.classList.remove('hide');
+        } else {
+            backToTopButton.classList.remove('show');
+            backToTopButton.classList.add('hide');
+        }
+    }
+
+    window.addEventListener('scroll', toggleBackToTopButton);
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    toggleBackToTopButton();
+
     // Carousel Logic
     let currentImageIndex = 0;
     const images = document.querySelectorAll('.carousel-image');
@@ -119,22 +146,18 @@ document.addEventListener('DOMContentLoaded', () => {
         showImage(currentImageIndex);
     }
 
-    // Set interval for auto-changing images
     let carouselInterval = setInterval(nextImage, imageInterval);
 
-    // Add click event listener to images for manual change
     images.forEach(image => {
         image.addEventListener('click', () => {
-            clearInterval(carouselInterval); // Stop auto-change when manually clicked
+            clearInterval(carouselInterval);
             nextImage();
-            carouselInterval = setInterval(nextImage, imageInterval); // Restart auto-change after click
+            carouselInterval = setInterval(nextImage, imageInterval);
         });
     });
 
-    // Initialize with the first image
     showImage(currentImageIndex);
 
-    // Carousel controls
     const nextButton = document.querySelector('.next-btn');
     const prevButton = document.querySelector('.prev-btn');
 
@@ -145,22 +168,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevButton) {
         prevButton.addEventListener('click', prevImage);
     }
-
-    // Back to Top Button functionality
-    const backToTopButton = document.getElementById('backToTop');
-
-    // Show or hide the button based on scroll position
-    function toggleBackToTopButton() {
-        if (window.scrollY > 300) { // Change 300 to the scroll position where you want to show the button
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    }
-
-    // Listen for scroll events
-    window.addEventListener('scroll', toggleBackToTopButton);
-
-    // Initial check
-    toggleBackToTopButton();
 });
+
+// Define learning paths and courses
+const learningPaths = {
+    engineering: {
+        pathName: "Engineering Onboarding Path",
+        courses: [
+            "Introduction to Engineering",
+            "Advanced Engineering Principles",
+            "Engineering Tools and Technologies",
+            "Code Standards and Practices"
+        ]
+    },
+    sales: {
+        pathName: "Sales Onboarding Path",
+        courses: [
+            "Sales Techniques and Strategies",
+            "Customer Relationship Management",
+            "Sales Tools and Platforms",
+            "Sales Reporting and Analytics"
+        ]
+    },
+    HR: {
+        pathName: "HR Onboarding Path",
+        courses: [
+            "Human Resources Fundamentals",
+            "Employee Relations",
+            "HR Compliance and Policies",
+            "HR Tools and Systems"
+        ]
+    }
+};
