@@ -110,6 +110,11 @@ input, select {
     border-radius: 5px;
 }
 
+input#fullName, input#startDate {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .button-container {
     text-align: center;
 }
@@ -171,7 +176,8 @@ footer {
     border-radius: 8px;
     padding: 0; /* Remove any padding */
 }
-.carousel-container{
+
+.carousel-container {
     height: 400px;
 }
 
