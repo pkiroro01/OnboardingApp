@@ -49,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('resultStartDate').innerText = `Starting Date: ${startDate}`;
         document.getElementById('resultJobRole').innerText = `Job Role: ${jobRole}`;
 
-        // Ensure progress bar is set to 100% upon submission
-        document.getElementById('progressBar').style.width = '100%';
-
         toggleFormAndResult(false);
     }
 
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleStepVisibility(1, true); // Show the first step
         toggleStepVisibility(2, false); // Hide all other steps
         toggleStepVisibility(3, false); // Hide all other steps
-        updateProgressBar(); // Reset the progress bar to 0%
+        updateProgressBar(); // Reset the progress bar
         toggleFormAndResult(true); // Show the form and hide the result
     }
 
@@ -148,4 +145,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevButton) {
         prevButton.addEventListener('click', prevImage);
     }
+
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show or hide the button based on scroll position
+    function toggleBackToTopButton() {
+        if (window.scrollY > 300) { // Change 300 to the scroll position where you want to show the button
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', toggleBackToTopButton);
+
+    // Initial check
+    toggleBackToTopButton();
 });
