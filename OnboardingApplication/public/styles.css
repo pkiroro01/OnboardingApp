@@ -148,3 +148,87 @@ footer {
     text-align: left;
     margin-bottom: 20px;
 }
+
+.centered-list {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.centered-list li {
+    text-align: center;
+    display: list-item;
+    list-style-position: inside;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Ensures images stay within the container */
+    border-radius: 8px;
+    padding: 0; /* Remove any padding */
+}
+.carousel-container{
+    height: 400px;
+}
+
+.carousel-slide {
+    display: flex; /* Align images in a row */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    position: relative; /* Necessary for absolute positioning of images */
+    width: 100%; /* Ensure the slide takes up full width */
+    height: 100%; /* Ensure the slide takes up full height */
+    box-sizing: border-box; /* Include padding and border in element's width/height */
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide all images by default */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fading images */
+    z-index: 1;
+    padding: 0; /* Ensure no padding is applied */
+    box-sizing: border-box; /* Include padding and border in element's width/height */
+}
+
+.carousel-image.active {
+    opacity: 1; /* Only the active image is fully visible */
+    z-index: 2;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+}
+
+.carousel-control.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-control.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0,0,0,0.8);
+}

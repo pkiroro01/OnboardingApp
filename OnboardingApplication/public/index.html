@@ -34,15 +34,15 @@
             <label for="fullName">Full Name:</label>
             <input type="text" id="fullName" name="fullName" required>
             <div class="button-container">
-                <button type="button" class="btn-next" onclick="nextStep(1)">Next</button>
+                <button type="button" class="btn-next">Next</button>
             </div>
         </div>
         <div class="form-group animate__animated" id="step2" style="display:none;">
             <label for="startDate">Starting Date:</label>
             <input type="date" id="startDate" name="startDate" required>
             <div class="button-container">
-                <button type="button" class="btn-back" onclick="prevStep(2)">Back</button>
-                <button type="button" class="btn-next" onclick="nextStep(2)">Next</button>
+                <button type="button" class="btn-back">Back</button>
+                <button type="button" class="btn-next">Next</button>
             </div>
         </div>
         <div class="form-group animate__animated" id="step3" style="display:none;">
@@ -54,7 +54,7 @@
                 <option value="HR">HR</option>
             </select>
             <div class="button-container">
-                <button type="button" class="btn-back" onclick="prevStep(3)">Back</button>
+                <button type="button" class="btn-back">Back</button>
                 <button type="submit">Submit</button>
             </div>
         </div>
@@ -65,8 +65,8 @@
         <p id="resultStartDate"></p>
         <p id="resultJobRole"></p>
         <div class="button-container">
-            <button class="btn" onclick="editDetails()">Edit Details</button>
-            <button class="btn" onclick="resetForm()">Onboard New User</button>
+            <button class="btn btn-edit">Edit Details</button>
+            <button class="btn btn-reset">Onboard New User</button>
         </div>
     </div>
 </section>
@@ -78,14 +78,25 @@
         <p>Just Eat is a leading online food delivery marketplace, connecting consumers and restaurants through its platform in 24 countries.</p>
         <p>Founded in Denmark in 2001, Just Eat has grown to become a global leader in online food delivery, offering a convenient and reliable service to millions of customers worldwide.</p>
         <p>Our mission is to empower customers to choose from a wide variety of restaurants, providing them with an easy and fast food delivery experience.</p>
-        <img src="images/just-eat-delivery.jpg" alt="Just Eat Delivery" class="company-image">
+    </div>
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/just-eat-delivery.jpg" alt="Just Eat Delivery" class="carousel-image active">
+                <img src="images/just-eat-dinner.jpg" alt="Just Eat Dinner" class="carousel-image">
+                <img src="images/just-eat-scooters.jpg" alt="Just Eat Scooters" class="carousel-image">
+                <img src="images/just-eat-tacos.jpg" alt="Just Eat Tacos" class="carousel-image">
+                <img src="images/just-eat-courier.jpg" alt="Just Eat Courier" class="carousel-image">
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="help-section" class="container">
     <h2>Need Help?</h2>
     <p>If you need assistance with completing the onboarding form, follow these steps:</p>
-    <ol>
+    <ol class="centered-list">
         <li>Enter your full name in the first step.</li>
         <li>Select your starting date in the second step.</li>
         <li>Choose your job role in the final step and submit the form.</li>
