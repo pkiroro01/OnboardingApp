@@ -53,7 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('resultPath').innerText = `Learning Path: ${learningPath.pathName}`;
 
         const coursesList = learningPath.courses.map(course => `<li>${course}</li>`).join('');
-        document.getElementById('resultCourses').innerHTML = `<ul>${coursesList}</ul>`;
+        document.getElementById('resultCourses').innerHTML = `<ol class="centered-list">${coursesList}</ol>`;
+
+        // Ensure progress bar is set to 100% upon submission
+        document.getElementById('progressBar').style.width = '100%';
 
         toggleFormAndResult(false);
     }
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleStepVisibility(1, true); // Show the first step
         toggleStepVisibility(2, false); // Hide all other steps
         toggleStepVisibility(3, false); // Hide all other steps
-        updateProgressBar(); // Reset the progress bar
+        updateProgressBar(); // Reset the progress bar to 0%
         toggleFormAndResult(true); // Show the form and hide the result
     }
 
