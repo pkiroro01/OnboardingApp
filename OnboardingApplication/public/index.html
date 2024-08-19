@@ -32,7 +32,7 @@
     <form id="onboardingForm" novalidate>
         <div class="form-group animate__animated" id="step1">
             <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <input type="text" id="fullName" name="fullName" pattern="[A-Za-z\s]+" title="Please enter only letters and spaces." required>
             <div class="button-container">
                 <button type="button" class="btn-next">Next</button>
             </div>
