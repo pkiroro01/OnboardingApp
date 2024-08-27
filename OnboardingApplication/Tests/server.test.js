@@ -1,7 +1,7 @@
 // server.test.js
 const request = require('supertest');
 const express = require('express');
-const app = require('../server'); // Make sure your server exports the app
+const app = require('../server');
 
 describe('Server-side API tests', () => {
 
