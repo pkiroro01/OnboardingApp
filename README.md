@@ -46,7 +46,7 @@ Install the necessary dependencies using npm:
 
 To start the application, use the following command:
 
-`npm start`
+`node server.js`
 
 This will start the server and you can access the application at http://localhost:3000/onboarding.html in your web browser.
 
