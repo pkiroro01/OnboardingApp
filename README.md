@@ -52,7 +52,11 @@ This will start the server and you can access the application at http://localhos
 
 ## **Running Tests**
 
-To ensure everything is working correctly, you can run the tests using Jest. To execute the tests, use:
+To ensure everything is working correctly, you can run the tests using Jest.
+
+Ensure **Jest** is installed using `npm install jest`.
+
+To execute the tests, use:
 
 `npm test`
 
