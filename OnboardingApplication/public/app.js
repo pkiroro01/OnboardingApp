@@ -178,28 +178,28 @@ const learningPaths = {
     engineering: {
         pathName: "Engineering Onboarding Path",
         courses: [
-            { name: "Introduction to Engineering", url: "https://www.linkedin.com/learning/introduction-to-engineering" },
-            { name: "Advanced Engineering Principles", url: "https://www.pluralsight.com/courses/advanced-engineering-principles" },
-            { name: "Engineering Tools and Technologies", url: "https://www.udacity.com/course/engineering-tools-and-technologies" },
-            { name: "Code Standards and Practices", url: "https://www.codecademy.com/learn/code-standards-practices" }
+            { name: "Introduction to Engineering", url: "https://www.coursera.org/learn/introduction-to-software-engineering" },
+            { name: "Advanced Engineering Principles", url: "https://www.pluralsight.com/courses/principles-data-quality-measures" },
+            { name: "Engineering Tools and Technologies", url: "https://www.pluralsight.com/paths/security-architecture-and-engineering-tools" },
+            { name: "Code Standards and Practices", url: "https://www.pluralsight.com/paths/secure-coding" }
         ]
     },
     sales: {
         pathName: "Sales Onboarding Path",
         courses: [
-            { name: "Sales Techniques and Strategies", url: "https://www.linkedin.com/learning/sales-techniques-strategies" },
+            { name: "Sales Techniques and Strategies", url: "https://www.coursera.org/learn/sales-process-techniques-training" },
             { name: "Customer Relationship Management", url: "https://www.coursera.org/learn/customer-relationship-management" },
-            { name: "Sales Tools and Platforms", url: "https://www.udemy.com/course/sales-tools-and-platforms" },
-            { name: "Sales Reporting and Analytics", url: "https://www.edx.org/course/sales-reporting-and-analytics" }
+            { name: "Sales Tools and Platforms", url: "https://www.coursera.org/learn/sales-and-crm-overview?" },
+            { name: "Sales Reporting and Analytics", url: "https://www.coursera.org/learn/uva-darden-market-analytics" }
         ]
     },
     HR: {
         pathName: "HR Onboarding Path",
         courses: [
-            { name: "Human Resources Fundamentals", url: "https://www.linkedin.com/learning/human-resources-fundamentals" },
-            { name: "Employee Relations", url: "https://www.pluralsight.com/courses/employee-relations" },
-            { name: "HR Compliance and Policies", url: "https://www.udemy.com/course/hr-compliance-policies" },
-            { name: "HR Tools and Systems", url: "https://www.coursera.org/learn/hr-tools-systems" }
+            { name: "Human Resources Fundamentals", url: "https://www.coursera.org/learn/managing-human-resources?" },
+            { name: "Employee Relations", url: "https://www.coursera.org/learn/employee-relations?" },
+            { name: "HR Compliance and Policies", url: "https://www.coursera.org/specializations/regulatory-compliance?" },
+            { name: "HR Tools and Systems", url: "https://www.coursera.org/projects/hr-analytics-build-hr-dashboard-using-power-bi" }
         ]
     }
 };
